@@ -1,0 +1,16 @@
+{
+	"driver":"mysql",
+    "dbname":"",
+    "dbhost":"localhost",
+    "dbuser":"root",
+    "dbpass":"toor",
+	"app_data":{
+    	"css":"css/app.css",
+    	"js":"js/application.js",
+        "titol":"KFramework",
+        "logo":"img/logo.jpg",
+        "apli":"KMan",
+        "theme":"pub/themes/k/",
+        "app_w":""
+    }
+}
