@@ -1,4 +1,6 @@
 <?php
+	
+
 	class Template{
 		
 		static function load($contents,$data=null){

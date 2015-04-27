@@ -1,7 +1,7 @@
 -- Created by Vertabelo (http://vertabelo.com)
 -- Script type: create
 -- Scope: [tables, references, sequences, views, procedures]
--- Generated at Wed Feb 18 14:53:21 UTC 2015
+-- Generated at Thu Feb 26 17:58:17 UTC 2015
 
 
 
@@ -9,26 +9,38 @@
 -- tables
 -- Table advertise
 CREATE TABLE advertise (
-    id int    NOT NULL  AUTO_INCREMENT,
-    `desc` text    NULL ,
+    id int    AUTO_INCREMENT,
+    descr text    NULL ,
     users_id int    NOT NULL ,
     foto1 varchar(100)    NOT NULL ,
+    data_pub date    NOT NULL ,
+    data_mod date NULL,
     CONSTRAINT advertise_pk PRIMARY KEY (id)
+);
+
+-- Table rol
+CREATE TABLE rol (
+    id int   AUTO_INCREMENT,
+    rol varchar(10)    NOT NULL ,
+    CONSTRAINT rol_pk PRIMARY KEY (id)
 );
 
 -- Table sessions
 CREATE TABLE sessions (
-    id int    NOT NULL  AUTO_INCREMENT,
+    id int   AUTO_INCREMENT,
     users_id int    NOT NULL ,
-    created timestamp    NOT NULL ,
+    created timestamp    NULL ,
+    sessid char(32)    NULL ,
     CONSTRAINT sessions_pk PRIMARY KEY (id)
 );
 
 -- Table users
 CREATE TABLE users (
-    id int    NOT NULL  AUTO_INCREMENT,
+    id int    AUTO_INCREMENT,
     name varchar(30)    NULL ,
-    password varchar(64)    NULL ,
+    password varchar(64)  NOT  NULL ,
+    email varchar(60)  NOT  NULL ,
+    rol int    NOT NULL ,
     CONSTRAINT users_pk PRIMARY KEY (id)
 );
 
@@ -48,8 +60,12 @@ ALTER TABLE advertise ADD CONSTRAINT advertise_users FOREIGN KEY advertise_users
 
 ALTER TABLE sessions ADD CONSTRAINT sessions_users FOREIGN KEY sessions_users (users_id)
     REFERENCES users (id);
+-- Reference:  users_rol (table: users)
+
+
+ALTER TABLE users ADD CONSTRAINT users_rol FOREIGN KEY users_rol (rol)
+    REFERENCES rol (id);
 
 
 
 -- End of file.
-

@@ -1,4 +1,6 @@
 <?php
+	
+
 	class DB extends PDO{
 
 			static $_instance;

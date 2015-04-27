@@ -1,4 +1,5 @@
 <?php
+	
 	class mInstall extends Model{
 		protected $conf;
 
@@ -9,9 +10,7 @@
 			// a litle prove in--->out
 			//$this->data_out=$params;
 		}
-		function get_out(){
-			return $this->data_out;
-		}
+		
 		function create($dbname){
 			$dbhost = $this->conf->dbhost;
 			$dbuser = $this->conf->dbuser;

@@ -1,4 +1,6 @@
 <?php
+	
+
 	class Core{
 
 		static private $controller;
@@ -7,7 +9,10 @@
 		static private $conf;
 
 		static function init(){
+			//Session::init();
 			
+			//Coder::code_var($_SESSION);
+			//die;
 			//now we can evaluate the request
 			self::$conf=Registry::getInstance();
 			Request::retrieve();

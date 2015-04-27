@@ -1,16 +1,19 @@
 {
 	"driver":"mysql",
-    "dbname":"",
+    "dbname":"kapp",
     "dbhost":"localhost",
-    "dbuser":"root",
-    "dbpass":"toor",
+    "dbuser":"kapp",
+    "dbpass":"kapp",
 	"app_data":{
     	"css":"css/app.css",
     	"js":"js/application.js",
-        "titol":"KFramework",
-        "logo":"img/logo.jpg",
-        "apli":"KMan",
-        "theme":"pub/themes/k/",
-        "app_w":""
+        "titol":"KApvertise",
+        "logo":"img/logo_maquet.png",
+        "apli":"KAPPvertise",
+        "theme":"pub/theme/k/",
+        "app_w":"",
+        "menu1":"Inici",
+        "menu2":"Registra",
+        "menu3":"Publica"
     }
 }

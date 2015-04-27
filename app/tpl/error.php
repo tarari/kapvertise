@@ -1,12 +1,16 @@
-<body>        
-    <header>
-          <div class="header-tit">
-            <div id="wrapper">
-            <a href="<?= APP_W; ?>"><img class="logo" alt="Put your logo" src="<?= APP_W.'pub/theme/k/'.$logo;?>"/></a>
-            <h1><?= $titol;?></h1>
-            </div>
-          </div> <!-- from div header-tit -->
-          </header>
-          <section>
-    <h2>Error section</h2>
-  </section>
+<?php
+  $menu=array(
+      'Inici'=>APP_W
+      
+    );
+  include 'common.php';
+?>
+  <div class="menu">
+    <?php
+      KMenu::create($menu);
+    ?>
+  </div>
+  <div class="content">
+    <h2>Error</h2>
+    <h3>Pàgina inexistent</h3>
+  </div>

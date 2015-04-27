@@ -1,5 +1,6 @@
 <?php
-	
+ 
+
 	function is_base(){
             if (APP_W!='/'){
                return false; 
@@ -17,8 +18,8 @@
 	spl_autoload_register('KAutoloader::AppContLoader');
 	spl_autoload_register('KAutoloader::AppModLoader');
 	spl_autoload_register('KAutoloader::AppVieLoader');
-
-
+    
+    
 	//this class helps in class autoload
 	class KAutoloader{
 		static function SysLoader($class){
@@ -48,7 +49,7 @@
         	{
             	return false;
         	}
-        	include $file;
+        	require $file;
 		}
 		static function AppVieLoader($class){
 			$filename = strtolower($class) . '.php';
@@ -61,12 +62,35 @@
         	require $file;
 		}
 	}
+
+    class KMenu{
+
+        static function create($menu=array()){
+            echo '<ul>';
+            foreach ($menu as $item => $link) {
+                echo '<a href="'.$link.'"><li>'.$item.'</li></a>';
+            }
+            echo '</ul>';
+        }
+    }
+    class KButton{
+        static function create($menu=array()){
+            echo '<ul>';
+            foreach ($menu as $item ) {
+                echo '<button type="button">'.$item.'</button>';
+            }
+            echo '</ul>';
+        }
+    }
+
 	 class Coder{
 	 	static function code($var){
 	 		echo '<pre>'.$var.'</pre>';
+            die;
 	 	}
 	 	static function code_var($var){
 	 		echo '<pre>'.var_dump($var).'</pre>';
+            die;
 	 	}
 	 }
      class SQLParser{

@@ -1,4 +1,6 @@
 <?php
+	namespace Kapp;
+
 	function base($str){
             if($str=='//'){
                 return '/';
@@ -12,6 +14,6 @@
 	define('APP',ROOT.'app'.DS);
 	$app_w=dirname($_SERVER['PHP_SELF']).DS;
     define ('APP_W',base($app_w));
-	//echo APP_W;
-	// it could be in another file
+	
+	
 	

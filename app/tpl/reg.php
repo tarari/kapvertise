@@ -1,33 +1,30 @@
-<body>        
-    <header>
-          <div class="header-tit">
-            <div id="wrapper">
-            <a href="<?= APP_W; ?>"><img class="logo" alt="Put your logo" src="<?= APP_W.'pub/theme/k/'.$logo;?>"/></a>
-            <h1><?= $titol;?></h1>
-            </div>
-          </div> <!-- from div header-tit -->
-          <!-- user register div -->  
-              <div class="regist">
-                <form class="reg" name="formlog" method="post" action="{app_w}index/login">
-                    <div id="hello"></div><!-- this is to show Hello name message -->
-                    <label for="email">email<input type="text" name="email" value="" placeholder="e@mail" required></label>
-                    <label for="password">password<input type="password" name="password" required></label>
-                    <input type="submit" value="Entra" id="logsend">
+<?php
+  $menu=array(
+      'Inici'=>APP_W
+      
+    );
+  include 'common.php';
+?>
+
+  <div class="menu">
+    <?php
+      KMenu::create($menu);
+    ?>
+  </div>
+    <div class="form-signing">
+          <h2>Registre d'usuaris</h2>
+                <form class="registre" name="formregister" method="post" action="<?= APP_W; ?>reg/send">
+                    <p>Nom</p>
+                    <label for="name"><input type="text" name="name" value="" placeholder="Introdueix nom" required></label></br>
+                    <p>Email</p>
+                    <label for="email"><input type="email" id="nick" name="email" value="" placeholder="e@mail" required></label></br>
+                    <div id="nick-msg"></div>
+                    <p>Password</p>
+                    <label for="password"><input type="password" placeholder="Password" name="password" required></label></br>
+                    <p>Reescriu password</p>
+                    <label for="repassword"><input type="password" placeholder="Reescriu assword" name="repassword" required></label></br>
+                    <input type="submit" value="Registra't" id="regsend">
                 </form>
-           
               </div>
-  </header>
-  <section>
-    <h2>Register user section</h2>
-    <div class="formreg">
-                <form class="registre" name="formregister" method="post" action="{app_w}reg/send">
-                    <div id="hello"></div><!-- this is to show Hello name message -->
-                    <label for="name">Name<input type="text" name="name" value="" placeholder="e@mail" required></label>
-                    
-                    <label for="email">email<input type="text" name="email" value="" placeholder="e@mail" required></label>
-                    <label for="password">password<input type="password" name="password" required></label>
-                    <input type="submit" value="Regsiter" id="regsend">
-                </form>
-           
-              </div>
+              
   </section>

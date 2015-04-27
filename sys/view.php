@@ -1,4 +1,5 @@
 <?php
+
 	/**
 	 *  class View
 	 * 	access to registry and loads
@@ -11,8 +12,8 @@
 			$this->reg=Registry::getInstance();
 			//access to app_data
 			$array_app=(array)$this->reg->app_data;
-			Template::load($contents,$array_app);
-				
+			ob_start();
+			Template::load($contents,$array_app);		
 		}
 		
 	}

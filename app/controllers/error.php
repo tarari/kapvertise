@@ -1,4 +1,5 @@
 <?php
+	
 	final class Error extends Controller{
 		function __construct($params=null){
 			parent::__construct($params);
