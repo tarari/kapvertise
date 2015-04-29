@@ -15,13 +15,15 @@
 		}
 		.head{
 			margin:0px;
+			margin-bottom: 5px;
 			padding-bottom:2px;
-
 			width: 100%;
 			min-height: 3em;
 			border-bottom: 3px solid #500000;
 		}
-		
+		.head h1{
+			display:inline-block;
+		}
 		
 		.logo{
 			width:35%;
@@ -30,7 +32,12 @@
 			display: inline-block;
 		}
 		.logo img{
-			height: 3em;
+			position: absolute;
+			width: auto;
+    		top:0px;
+    		left:0px;
+    		height: 3em;
+    		z-index: -1;
 			
 		}
 		
@@ -46,12 +53,15 @@
 			font-variant: small-caps;
 		}
 		#imgload{
+			position:absolute;
+			top:auto;
+			bottom: auto;
 			margin:3px;
-			display: inline-block;
+			
 			width: 1em;
 			vertical-align: top;
 			float: right;
-			visibility: hidden;
+			z-index: -1;
 			
 			
 		}
@@ -181,7 +191,7 @@
 
 			font-variant: small-caps;
 			color:#FFFFFF;
-			background-color: red;
+			background-color: orange;
 			margin-bottom: 3px;
 			width: 10em;
 		
@@ -191,7 +201,7 @@
 			float: none;
 			margin:auto;
 			min-height: 4em;
-			background-color:white;
+			background-color:#ededed;
 			font-size:90% ;
 		}
 		.users-table table  td{
@@ -199,28 +209,35 @@
 			border: 1px blue solid;
 			min-width: 4em;
 					}
-		.users-table input{
-			background-color:#eee;
-			height: 1em; 
+		.users-table input[type]{
+			background-color: #eee;
+  			height: 2.5em;
+  			font-style: oblique;
+  			font-size: initial;
 		}
 		.bedit{
 			background-image: url('img/edit.png');
-			background-color:white;
+			background-color:#ededed;
 			width:34px;
 			height: 34px;
 
 			}
 		.bedit:hover{
-			background-color:#eee;
+			background-color:#ccc;
 		}
 		.btrash{
 			background-image: url('img/trash.png');
-			background-color:white;
+			background-color:#ededed;
 			width:34px;
 			height: 34px;
 		}
 		.btrash:hover{
 
-			background-color:#eee;
+			background-color:#ccc;
 		
+		}
+		.message{
+			background-color:#555;
+			height: 2em;
+			color:orange;
 		}

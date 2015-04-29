@@ -21,7 +21,7 @@
 			if(isset($_POST['email'])){
 
 	            $email=filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-	            $password=md5(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING));           
+	            $password=md5(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING));        
 	            
 	            $user=$this->model->log($email,$password);
 	            //Coder::code($user);
@@ -37,7 +37,7 @@
             		//Coder::code($this->model->get_out());
             		//die;
 	                //Session::set('error',$this->model->get_out());
-	                $this->log_error($this->model->get_out());
+	                //$this->log_error($this->model->get_out());
 	                //setcookie('error',Session::get('error'),time()+120,APP_W);
 	                //Coder::code_var($_SESSION);
 	                $this->ajax_set(array('redirect'=>APP_W.'reg'));

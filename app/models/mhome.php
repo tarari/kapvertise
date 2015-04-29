@@ -10,7 +10,7 @@
 		
 		function log($email,$password){
         try{    
-            $sql="SELECT name,email,rol FROM users WHERE email=? AND password=?";
+            $sql="SELECT name,email,rol FROM users WHERE email=? AND pwd=?";
             $query=$this->db->prepare($sql);
             $query->bindParam(1,$email);
             $query->bindParam(2,$password);
@@ -23,7 +23,7 @@
             }
             else {
 
-                $this->data_out="Usuari no existeix";
+                
                 return FALSE;
                  
             }

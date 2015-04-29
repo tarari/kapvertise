@@ -9,6 +9,10 @@
                 return true;
             }
         }
+    function isValidMd5($md5 ='')
+    {
+        return preg_match('/^[a-f0-9]{32}$/', $md5);
+    }
     
 	//now the section for autoloading classes
 	//first of all nullify previous autoload

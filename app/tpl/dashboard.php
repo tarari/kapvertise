@@ -22,6 +22,5 @@
   ?>
   </div>
   <div class="content">
-  <div class="users-table"></div>
-    
+  <div class="users-table"></div> 
   </div>
