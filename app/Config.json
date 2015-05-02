@@ -1,7 +1,7 @@
 {
 	"driver":"mysql",
-    "dbname":"kapp",
-    "dbhost":"localhost",
+    "dbname":"kapvertise",
+    "dbhost":"127.4.62.2",
     "dbuser":"kapp",
     "dbpass":"kapp",
 	"app_data":{
