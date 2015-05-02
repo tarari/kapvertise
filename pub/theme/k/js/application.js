@@ -4,7 +4,7 @@ var show_mesg=function(str){
 };
 $(document).ready(function() {
 	//mostra momentàniament l'avís
-	setTimeout(function(){ $('.m-warning').hide(); }, 5000);
+	//setTimeout(function(){ $('.m-warning').hide(); }, 5000);
 	//checks existent mail
 	//$('.m-warning').on('change',function(){
 	//	setTimeout(function(){ $(this).hide(); }, 5000);

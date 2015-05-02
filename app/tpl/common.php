@@ -26,15 +26,6 @@
               }
             ?>
           </div>
-          <div class="m-warning">
-            <?php
-              if (isset($_COOKIE['error'])){
-                echo '<p><span style="color:red"> Error: '.$_COOKIE['error'].'</p>';
-              }
-              if (isset($_COOKIE['msg'])){
-                echo '<p><span style="color:green"> Missatge: '.$_COOKIE['msg'].'</p>';
-              }
-            ?>
-          </div>
+          
       </div>
  </div>
